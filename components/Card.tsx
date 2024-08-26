@@ -10,18 +10,18 @@ interface CardProps {
 const Card: FC<CardProps> = ({ img, description }) => {
   return (
     <div className="flex flex-col md:flex-row gap-5 items-center justify-center">
-      <div className="w-[100%]">
+      <div className=" overflow-hidden flex items-center">
         <Image
           src={img}
-          width={100}
-          //   height={500}
-          className="rounded-md mt-10 max-w-[100%]"
+          width={300}
+          //   height={0}
+          className="rounded-md object-cover h-[70px] w-[100px]"
           alt="About Zeta Biotech"
         />
       </div>
 
       <motion.p
-        className="mt-4 text-white font-sans w-full md:w-[80%] text-left"
+        className="mt-4 text-white font-sans w-full md:w-[80%] text-justify text-[13px]"
         initial={{ opacity: 0, translateY: 20 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}

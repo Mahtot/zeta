@@ -19,7 +19,7 @@ const Home = () => {
       <NavBar />
       <div className="flex flex-col  mt-32 px-3 sm:px-10   sm:w-[60vw] md:w-1/2 relative z-10 gap-6 ">
         <h1
-          className={`text-white text-[20px] sm:text-2xl md:text-4xl font-bold ${nunito.className}`}
+          className={`text-white text-[20px] sm:text-2xl md:text-4xl font-bold ${nunito.className}  flex flex-col sm:flex-row`}
         >
           AI in Biotechnology,
           <FlipWords words={words} /> <br />

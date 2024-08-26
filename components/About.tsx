@@ -9,13 +9,13 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.div
-      className="flex flex-col md:flex-row mt-[100px] w-[90vw] md:w-[70vw] justify-center mx-auto gap-10"
+      className="flex flex-col md:flex-row mt-[100px] w-[90vw] lg:w-[70vw] justify-center mx-auto gap-10 items-center"
       initial={{ opacity: 0, translateY: 50 }}
       whileInView={{ opacity: 1, translateY: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }} // Animation triggers only once
     >
-      <div className="flex flex-col justify-start w-full md:w-[80%]">
+      <div className="flex flex-col justify-start  w-full lg:w-[80%]">
         <h2
           className={`text-[#8EC441] text-[18px] text-xl font-bold ${nunito.className} flex items-center gap-2`}
         >
@@ -28,7 +28,7 @@ const About = () => {
           Who We Are
         </h1>
         <motion.p
-          className={`mt-4 text-white  font-sans  w-full md:w-[80%] text-left`}
+          className={`mt-4 text-white  font-sans  w-full lg:w-[80%] text-left`}
           initial={{ opacity: 0, translateY: 20 }}
           whileInView={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
