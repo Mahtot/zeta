@@ -17,17 +17,124 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 33, 62, 1),
+      /* #11213E */ rgba(26, 38, 61, 1) /* Subtle variation */
+    );
+  }
+  50% {
+    background: linear-gradient(
+      to bottom,
+      rgba(26, 38, 61, 1),
+      /* Subtle variation */ rgba(35, 54, 85, 1) /* Another subtle variation */
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 33, 62, 1),
+      /* #11213E */ rgba(26, 38, 61, 1) /* Subtle variation */
+    );
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  word-spacing: 1px;
+  letter-spacing: 2px;
+  /* animation: gradientAnimation 10s ease infinite; */
+  background: #13203e;
+  overflow-x: hidden;
+  /* background: linear-gradient(90deg, #13203e 10%, #13203e 97%, #13203e 100%); */
+  background-size: 400% 400%; /* For smoother transitions */
+  transition: background 1s ease; /* Smooth transition for background changes */
+}
+p {
+  letter-spacing: 0;
+}
+.custom button {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.custom button::after {
+  content: "";
+  background: linear-gradient(to right, #8ec441, #a7f1c6);
+  height: 100%;
+  width: 0px;
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 800ms ease-in-out;
+}
+
+.custom button:hover::after {
+  width: 100%;
+}
+.custom button:hover {
+  transition: 800ms ease-in-out;
+
+  color: black;
+}
+
+nav a {
+  position: relative;
+  cursor: pointer;
+  /* color: white; */
+  color: #a2a5b3;
+  width: max-content;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+nav a::after,
+nav a.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    #08090e 0%,
+    #8ec441 38%,
+    #727bac 65%,
+    #a7f1c6 100%
+  );
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active-link::after {
+  width: 100%;
+}
+
+nav a:hover,
+nav a.active-link::after,
+nav a.active-link {
+  color: #e1e3e4;
+  margin-top: -2px;
+  transition: all 0.3s;
 }
