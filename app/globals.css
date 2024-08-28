@@ -56,11 +56,9 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   word-spacing: 1px;
-  letter-spacing: 2px;
-  /* animation: gradientAnimation 10s ease infinite; */
-  background: #13203e;
+  /* letter-spacing: 2px; */
+  background: #0e0e0e;
   overflow-x: hidden;
-  /* background: linear-gradient(90deg, #13203e 10%, #13203e 97%, #13203e 100%); */
   background-size: 400% 400%; /* For smoother transitions */
   transition: background 1s ease; /* Smooth transition for background changes */
 }
@@ -130,11 +128,20 @@ nav a:hover::after,
 nav a.active-link::after {
   width: 100%;
 }
+nav a.logo-link:hover::after {
+  width: 0;
+}
 
 nav a:hover,
 nav a.active-link::after,
 nav a.active-link {
   color: #e1e3e4;
-  margin-top: -2px;
+  /* margin-top: -2px; */
   transition: all 0.3s;
+}
+
+a.contact:hover {
+  transition: all 0.5s;
+  box-shadow: 0px 0px 7px #d9f0b9;
+  background-color: rgba(142, 196, 65, 0.9);
 }
