@@ -10,7 +10,7 @@ const Button = () => {
       > */}
       <Link
         href="#contact"
-        className="contact block bg-[#8EC441] text-[14px] font-sans font-semibold text-[#0e0e0e] px-10 sm:px-20 rounded-3xl py-2 "
+        className="contact block mt-10 bg-[#8EC441] text-[14px] font-sans font-semibold text-[#0e0e0e] px-10 sm:px-20 rounded-3xl py-2 "
       >
         Contact Us
       </Link>

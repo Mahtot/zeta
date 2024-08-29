@@ -67,21 +67,21 @@ const NavBar = () => {
   return (
     <>
       <div
-        className={`self-start opacity-100 nav  h-16 relative ${nunito.className}  w-[90vw] mx-auto mt-10 `}
+        className={`self-start opacity-100  h-16 relative ${nunito.className}  w-[90vw] mx-auto mt-10 z-[1000]`}
       >
-        <nav className="bg-[#0e0e0e] z-40 opacity-80 flex justify-center  mx-auto fixed  h-46 p-4 w-[90vw] rounded-2xl">
+        <nav className="bg-[#0e0e0ebc]  z-[1000] opacity-100 flex justify-center  mx-auto fixed  h-46 p-3 w-[90vw] rounded-2xl">
           {/* Section for logo */}
-          <div className="mr-auto flex  self-start mt-[-10px] z-50">
+          <div className="mr-auto flex  z-50">
             <Link
               href="#home"
-              className="logo-link text-[#a7f1c6] w-[50%] h-10 p-1  "
+              className="logo-link text-[#a7f1c6] w-[50%] h-10   flex items-center justify-center  self-center"
             >
               <Image
                 src={logoImg}
                 alt="logo of zeta"
-                width={100}
+                width={70}
                 height={40}
-                className="object-contain" // Maintain aspect ratio
+                className="object-contain"
               />
             </Link>
           </div>
@@ -103,25 +103,23 @@ const NavBar = () => {
           </div>
 
           <div
-            className={`menu opacity-100 bg-[#0e0e0e] h-screen overflow-y-auto md:overflow-hidden fixed top-0 right-0 md:top-auto md:right-auto w-[100%] sm:w-[60%] md:w-auto pt-32 md:pt-0 md:relative md:h-auto md:bg-inherit flex flex-col md:flex-row gap-2 md:gap-10 transition-all p-10 md:p-0 
+            className={`menu opacity-100 h-screen overflow-y-auto md:overflow-hidden fixed top-0 right-0 md:top-auto md:right-auto w-[100%] sm:w-[60%] md:w-auto pt-32 md:pt-0 md:relative md:h-auto md:bg-none flex flex-col md:flex-row gap-2 md:gap-0 transition-all p-10 md:p-0 
             md:translate-x-0
-            ${
-              isMenuOpen ? "translate-x-[0px] opacity-100" : "translate-x-full"
-            }`}
+            ${isMenuOpen ? "translate-x-[0px] " : "translate-x-full"}`}
           >
             {menuItems.map((item, index) => (
-              <Link
-                href={item.to}
-                key={index}
-                onClick={() => handleLinkClick(item.name)}
-                className={`${
-                  activeLink === item.name
-                    ? "text-[#a7f1c6] active-link"
-                    : "text-white"
-                } p- flex justify-center items-center hover:text-[#a7f1c6] transition-colors mt-10 ml-10 md:mt-0 text-[14px]`}
-              >
-                {item.name}
-              </Link>
+              <div className="nav-llnk  flex items-center justify-center">
+                <Link
+                  href={item.to}
+                  key={index}
+                  onClick={() => handleLinkClick(item.name)}
+                  className={` w-[100px] ${
+                    activeLink === item.name ? "text-[#a7f1c6] active-link" : ""
+                  } p- flex justify-center items-center  transition-colors mt-10 ml-10 md:mt-0 text-[14px]`}
+                >
+                  {item.name}
+                </Link>
+              </div>
             ))}
           </div>
         </nav>

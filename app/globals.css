@@ -143,5 +143,60 @@ nav a.active-link {
 a.contact:hover {
   transition: all 0.5s;
   box-shadow: 0px 0px 7px #d9f0b9;
-  background-color: rgba(142, 196, 65, 0.9);
+  background-color: #8ec441e6;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+  width: 8px;
+  padding: 2.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #262626;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: var(--size--24);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #262626;
+  border-radius: var(--size--24);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #8ec441e6;
+  color: white;
+  text-shadow: none;
+}
+
+img::selection,
+svg::selection {
+  background: transparent;
+}
+
+/* prevent horizontal scroll */
+.page-wrap,
+.inner-wrapper,
+[clip="true"] {
+  overflow: clip;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    background-color: #0e0e0ebc;
+  }
 }
