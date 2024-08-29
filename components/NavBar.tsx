@@ -108,10 +108,12 @@ const NavBar = () => {
             ${isMenuOpen ? "translate-x-[0px] " : "translate-x-full"}`}
           >
             {menuItems.map((item, index) => (
-              <div className="nav-llnk  flex items-center justify-center">
+              <div
+                className="nav-llnk  flex items-center justify-center"
+                key={index}
+              >
                 <Link
                   href={item.to}
-                  key={index}
                   onClick={() => handleLinkClick(item.name)}
                   className={` w-[100px] ${
                     activeLink === item.name ? "text-[#a7f1c6] active-link" : ""
