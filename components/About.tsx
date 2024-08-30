@@ -246,7 +246,7 @@ const About = () => {
             </div>
             <div className="spacer_16"></div>
             <div className="text_maxch-85">
-              <h2 className="h_84">Let's make this decision easy for you</h2>
+              <h2 className="h_84">Let&apos;s make this decision easy for you</h2>
             </div>
             <div className="spacer_16"></div>
             <div className="p_21 text_neutral-500 text_lh-1-5">
@@ -758,7 +758,7 @@ const About = () => {
                   words-slide-from-right=""
                   className="p_14 text_neutral-500"
                 >
-                  We're committed to your privacy. MultiversX uses the
+                  We&apos;re committed to your privacy. MultiversX uses the
                   information you provide to us to contact you about MultiversX
                   content and events. You may unsubscribe from these
                   communications at any time. For more information, check out
