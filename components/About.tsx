@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import MarqueeCommunity from "./MarqueeCommunity";
 import Partners from "./Partners";
 
-const About: React.FC<AboutProps> = () => {
+const About = () => {
   return (
       <main className="main-wrapper">
 
@@ -61,7 +61,7 @@ const About: React.FC<AboutProps> = () => {
               <h1 className="h_64">The Internet-Scale Blockchain</h1>
               <div className="spacer_24"></div>
               <div className="text_maxch-90">
-                <div balance="" className="p_21 text_neutral-500">
+                <div  className="p_21 text_neutral-500">
                   MultiversX, the EGLD&nbsp;network, is a distributed blockchain
                   network for next-gen applications. Decentralized via 3,000+
                   nodes, scalable through sharding, fast, secure &amp; green.
@@ -130,7 +130,7 @@ const About: React.FC<AboutProps> = () => {
                   <div className="text_align-right">
                     <div className="h_40 mobile_vw">
                       ~$0<span className="op_60">.00</span>
-                      <span count="static" className="op_60">
+                      <span  className="op_60">
                         2
                       </span>
                     </div>
@@ -725,13 +725,11 @@ const About: React.FC<AboutProps> = () => {
                 <div className="newsletter_input-wrap">
                   <input
                     className="form_input w-input"
-                    maxlength="256"
-                    name="Email"
-                    data-name="Email"
+                   
                     placeholder="Enter a valid email address"
                     type="email"
                     id="Email"
-                    required=""
+                    
                   />
                   <input
                     type="submit"
