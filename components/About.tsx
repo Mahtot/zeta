@@ -10,7 +10,8 @@ import Partners from "./Partners";
 
 const About = () => {
   return (
-    <main className="main-wrapper">
+      <main className="main-wrapper">
+
       <img
         src="../cdn.multiversx.com/webflow/Hero%20section%20background.webp"
         loading="eager"
