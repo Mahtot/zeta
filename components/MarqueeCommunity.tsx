@@ -10,7 +10,6 @@ const MarqueeCommunity: React.FC = () => {
     "../cdn.multiversx.com/webflow/xCommunity-upper-04.webp",
     "../cdn.multiversx.com/webflow/xCommunity-upper-03.webp",
     "../cdn.multiversx.com/webflow/xCommunity-upper-02.webp",
-    "../cdn.multiversx.com/webflow/xCommunity-lower-01-4.webp",
   ];
 
   const images2 = [

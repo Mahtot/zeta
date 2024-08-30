@@ -453,7 +453,7 @@ a {
 }
 
 .marquee_content {
-  animation: marquee 50s linear infinite;
+  animation: marquee 150s linear infinite;
 }
 
 .marquee_content.left {
@@ -474,5 +474,5 @@ a {
 }
 
 .community_stat {
-  /* margin-left: 10px;  */
+  margin-left: 10px; 
 }

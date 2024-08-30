@@ -18,8 +18,11 @@ export default function Home() {
       <div className="global-styles">
         <div className="html w-embed"></div>
       </div>
-      {/* <NavBar /> */}
-      <nav className="nav">
+      <div className=" w-[90vw] mx-auto">
+      <NavBar />
+
+      </div>
+      {/* <nav className="nav">
         <div click="off" className="nav-overlay"></div>
         <div className="nav-menu_backdrop">
           <a
@@ -1237,7 +1240,7 @@ export default function Home() {
             ></div>
           </div>
         </div>
-      </nav>
+      </nav> */}
       <Script id="custom-script" strategy="lazyOnload">
         {`
           (function (o, c) {
@@ -1271,6 +1274,7 @@ export default function Home() {
         strategy="lazyOnload"
       />
       <About />
+      
     </div>
   );
 }
