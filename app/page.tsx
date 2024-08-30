@@ -8,7 +8,6 @@ import Homel from "@/components/Home";
 import { motion } from "framer-motion";
 import About from "@/components/About";
 import Services from "@/components/Services";
-import "@/public/css2.css";
 import "@/public/cdn.prod.website-files.com/6597cc7be68d63ec0c8ce338/css/css.css";
 import Script from "next/script";
 

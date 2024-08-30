@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import MarqueeCommunity from "./MarqueeCommunity";
 import Partners from "./Partners";
 
-const About = () => {
+const About: React.FC<AboutProps> = () => {
   return (
     <main className="main-wrapper">
       <img
